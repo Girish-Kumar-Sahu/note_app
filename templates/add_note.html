@@ -1,10 +1,9 @@
 {% extends "base.html" %}
-
 {% block content %}
 <h2>Add Note</h2>
 <form method="POST">
-    <input type="text" name="note" required>
-    <button type="submit">Save</button>
+    <textarea name="note" required></textarea>
+    <button class="btn">Save</button>
 </form>
 <a href="/">Back</a>
 {% endblock %}
