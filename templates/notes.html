@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>All Notes</h2>
+
+{% for note in notes %}
+<div class="note-card">
+    <p>{{ note["content"] }}</p>
+    <small>Created at: {{ note["created_at"] }}</small><br>
+    <a href="/edit/{{ note['id'] }}">Edit</a> |
+    <a href="/delete/{{ note['id'] }}">Delete</a>
+</div>
+{% endfor %}
+
+<a href="/">Back</a>
+{% endblock %}
